@@ -41,45 +41,47 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={rootRef} className="relative min-h-screen overflow-hidden blob-grid-bg">
-      <RobotScene />
+    <section ref={rootRef} className="relative min-h-[100dvh] overflow-hidden blob-grid-bg flex flex-col">
+      <div className="relative w-full h-[320px] md:h-[480px] lg:h-[560px] shrink-0">
+        <RobotScene />
+      </div>
 
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-center px-6 pt-36 pb-24 text-center">
-        <div className="hero-chip glass mb-8 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-neon-300">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-center px-6 pt-8 pb-12 text-center flex-1">
+        <div className="hero-chip glass mb-6 md:mb-8 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-neon-300">
           <span className="h-2 w-2 animate-pulse rounded-full bg-zap-400" />
           रोबो ज्ञान · Robotics for Indian classrooms
         </div>
 
-        <h1 className="max-w-4xl text-5xl font-extrabold leading-[1.08] tracking-tight md:text-7xl">
+        <h1 className="max-w-4xl text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight">
           <span className="hero-line block">Kids don&apos;t just</span>
           <span className="hero-line block">use technology.</span>
-          <span className="hero-line text-gradient block pb-3">They build it.</span>
+          <span className="hero-line text-gradient block pb-2 md:pb-3">They build it.</span>
         </h1>
 
-        <p className="hero-line mt-6 max-w-2xl text-lg font-medium text-slate-300/90 md:text-xl">
+        <p className="hero-line mt-4 md:mt-6 max-w-2xl text-sm sm:text-base md:text-xl font-medium text-slate-300/90">
           RoboGyaan runs hands-on robotics, coding and 3D design programs inside schools —
           from first puzzle to a working Arduino robot, grade by grade.
         </p>
 
-        <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
+        <div className="mt-6 md:mt-10 flex flex-col items-center gap-3 sm:gap-4 sm:flex-row w-full max-w-md sm:max-w-none">
           <a
             href="#contact"
-            className="hero-cta rounded-full bg-gradient-to-r from-neon-400 to-grape-500 px-8 py-4 text-base font-bold text-white shadow-xl shadow-grape-600/40 transition hover:scale-105 hover:shadow-grape-500/60"
+            className="hero-cta rounded-full bg-gradient-to-r from-neon-400 to-grape-500 px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold text-white shadow-xl shadow-grape-600/40 transition hover:scale-105 hover:shadow-grape-500/60 w-full sm:w-auto text-center"
           >
             Book a Demo for Your School →
           </a>
           <a
             href="#programs"
-            className="hero-cta rounded-full border border-white/20 px-8 py-4 text-base font-bold text-slate-200 transition hover:border-neon-400 hover:text-neon-300"
+            className="hero-cta rounded-full border border-white/20 px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold text-slate-200 transition hover:border-neon-400 hover:text-neon-300 w-full sm:w-auto text-center"
           >
             Explore Programs
           </a>
         </div>
 
-        <div className="mt-16 flex flex-wrap items-center justify-center gap-3 text-xs font-semibold text-slate-400">
+        <div className="mt-8 md:mt-12 flex flex-wrap items-center justify-center gap-2 md:gap-3 text-[10px] sm:text-xs font-semibold text-slate-400">
           {["micro:bit", "Arduino Uno", "Avishkaar Kits", "Scratch & Blockly", "3D Design"].map(
             (tool) => (
-              <span key={tool} className="glass rounded-full px-4 py-2">
+              <span key={tool} className="glass rounded-full px-3 py-1.5 sm:px-4 sm:py-2">
                 {tool}
               </span>
             )
@@ -87,8 +89,8 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2">
-        <div className="animate-float h-10 w-6 rounded-full border-2 border-white/25 p-1.5">
+      <div className="absolute bottom-4 md:bottom-6 left-1/2 z-10 -translate-x-1/2">
+        <div className="animate-float h-8 w-5 md:h-10 md:w-6 rounded-full border-2 border-white/25 p-1">
           <div className="h-2 w-full animate-pulse rounded-full bg-neon-400" />
         </div>
       </div>

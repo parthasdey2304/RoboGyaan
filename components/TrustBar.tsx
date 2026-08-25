@@ -4,8 +4,8 @@ import { useEffect, useRef } from "react";
 
 const STATS = [
   { value: 1, suffix: "+", label: "Partner school live today" },
-  { value: 3, suffix: "-", label: "Grade bands covered (Class 5–8)" },
-  { value: 6, suffix: "+", label: "Tools & kits in the curriculum" },
+  { value: 3, suffix: "-", label: "Grade bands covered" },
+  { value: 6, suffix: "+", label: "Tools & kits" },
 ];
 
 const PARTNERS = [
@@ -50,31 +50,31 @@ export default function TrustBar() {
   }, []);
 
   return (
-    <section ref={rootRef} className="relative border-y border-white/10 bg-ink-2 py-14">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 sm:grid-cols-3">
+    <section ref={rootRef} className="relative border-y border-white/10 bg-ink-2 py-10 sm:py-14">
+      <div className="mx-auto grid max-w-6xl grid-cols-3 gap-4 sm:gap-10 px-4 sm:px-6">
         {STATS.map((stat) => (
           <div key={stat.label} className="text-center">
-            <div className="text-gradient text-5xl font-extrabold">
+            <div className="text-gradient text-3xl sm:text-5xl font-extrabold">
               <span className="stat-num" data-value={stat.value}>
                 0
               </span>
               {stat.suffix}
             </div>
-            <p className="mt-2 text-sm font-medium text-slate-400">{stat.label}</p>
+            <p className="mt-1 sm:mt-2 text-[10px] sm:text-sm font-medium text-slate-400 leading-tight">{stat.label}</p>
           </div>
         ))}
       </div>
 
-      <div className="mt-12 overflow-hidden">
-        <p className="mb-5 text-center text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">
+      <div className="mt-8 sm:mt-12 overflow-hidden">
+        <p className="mb-4 sm:mb-5 text-center text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-slate-500">
           Growing one classroom at a time
         </p>
-        <div className="relative flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
-          <div className="animate-marquee flex shrink-0 items-center gap-12 pr-12">
+        <div className="relative flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+          <div className="animate-marquee flex shrink-0 items-center gap-8 sm:gap-12 pr-8 sm:pr-12">
             {[...PARTNERS, ...PARTNERS].map((name, i) => (
               <span
                 key={`${name}-${i}`}
-                className="whitespace-nowrap text-lg font-bold text-slate-500/80"
+                className="whitespace-nowrap text-sm sm:text-lg font-bold text-slate-500/80"
               >
                 {name}
               </span>

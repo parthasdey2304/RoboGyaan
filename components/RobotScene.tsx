@@ -11,13 +11,14 @@ export default function RobotScene() {
     if (!mount) return;
 
     const scene = new THREE.Scene();
+    const isMobile = mount.clientWidth < 768;
     const camera = new THREE.PerspectiveCamera(
       55,
       mount.clientWidth / mount.clientHeight,
       0.1,
       100
     );
-    camera.position.set(0, 0, 9);
+    camera.position.set(0, 0, isMobile ? 14 : 9);
 
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     renderer.setSize(mount.clientWidth, mount.clientHeight);
@@ -25,6 +26,8 @@ export default function RobotScene() {
     mount.appendChild(renderer.domElement);
 
     const mainGroup = new THREE.Group();
+    const scale = isMobile ? 0.65 : 1;
+    mainGroup.scale.setScalar(scale);
     scene.add(mainGroup);
 
     const wireMaterial = (color: number, opacity = 0.45) =>
