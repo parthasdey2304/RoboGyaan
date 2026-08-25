@@ -23,10 +23,11 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.svg",
+        url: "https://www.robogyaan.in/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "RoboGyaan — Kids build robots, not just use them",
+        type: "image/png",
       },
     ],
   },
@@ -35,14 +36,14 @@ export const metadata: Metadata = {
     title: "RoboGyaan — Robotics & STEM for Indian Schools",
     description:
       "Hands-on robotics, coding and 3D design programs delivered inside your school.",
-    images: ["/og-image.svg"],
+    images: ["https://www.robogyaan.in/opengraph-image.png"],
   },
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon.ico", sizes: "any" },
+      { url: "https://www.robogyaan.in/favicon.svg", type: "image/svg+xml" },
+      { url: "https://www.robogyaan.in/favicon.ico", sizes: "any" },
     ],
-    apple: "/apple-icon.png",
+    apple: "https://www.robogyaan.in/apple-icon.png",
   },
 };
 
@@ -56,9 +57,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${poppins.variable} h-full antialiased`}>
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-icon.png" />
+        <link rel="icon" href="https://www.robogyaan.in/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="https://www.robogyaan.in/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="https://www.robogyaan.in/apple-icon.png" />
+        <meta property="og:image" content="https://www.robogyaan.in/opengraph-image.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:image" content="https://www.robogyaan.in/opengraph-image.png" />
       </head>
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>
