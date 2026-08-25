@@ -7,8 +7,8 @@ const LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-ink-2 py-12">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-6 md:flex-row">
+    <footer className="border-t border-white/10 bg-ink-2 py-8 sm:py-12">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 sm:gap-8 px-4 sm:px-6 md:flex-row">
         <div className="flex items-center gap-2.5">
           <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-neon-400 to-grape-500 font-extrabold text-ink">
             R

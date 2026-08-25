@@ -78,26 +78,26 @@ export default function Offer() {
   }, []);
 
   return (
-    <section ref={rootRef} id="programs" className="relative py-28">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-14 max-w-2xl">
+    <section ref={rootRef} id="programs" className="relative py-16 sm:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="mb-8 sm:mb-14 max-w-2xl">
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-neon-400">
             What we teach
           </p>
-          <h2 className="text-4xl font-extrabold tracking-tight md:text-5xl">
+          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight md:text-5xl">
             One journey. <span className="text-gradient">Four superpowers.</span>
           </h2>
-          <p className="mt-4 text-lg text-slate-300/80">
+          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-slate-300/80">
             A single curriculum that compounds — design feeds coding, coding drives robots,
             robots end up on stage.
           </p>
         </div>
 
-        <div className="offer-grid grid grid-cols-1 gap-5 md:grid-cols-4 lg:grid-cols-4">
+        <div className="offer-grid grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-4 lg:grid-cols-4">
           {PILLARS.map((p) => (
             <div
               key={p.title}
-              className={`offer-card group relative overflow-hidden rounded-3xl p-6 ${p.span} bg-ink-2/60 backdrop-blur-xl border ${p.border} ${p.hoverBorder} transition-all duration-500`}
+              className={`offer-card group relative overflow-hidden rounded-3xl p-4 sm:p-6 ${p.span} bg-ink-2/60 backdrop-blur-xl border ${p.border} ${p.hoverBorder} transition-all duration-500`}
             >
               <div
                 className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${p.gradient} opacity-0 transition-opacity duration-500 group-hover:opacity-100`}

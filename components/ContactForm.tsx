@@ -45,7 +45,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="glass rounded-3xl p-8 md:p-10">
+    <form onSubmit={handleSubmit} className="glass rounded-3xl p-5 sm:p-8 md:p-10">
       {FIELDS.map((f) => (
         <div key={f.name} className="mb-4">
           <label htmlFor={f.name} className="mb-1.5 block text-xs font-bold uppercase tracking-widest text-slate-400">

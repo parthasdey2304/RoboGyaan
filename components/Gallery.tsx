@@ -75,7 +75,7 @@ export default function Gallery() {
   }, []);
 
   return (
-    <section ref={rootRef} id="classroom" className="relative bg-ink py-28">
+    <section ref={rootRef} id="classroom" className="relative bg-ink py-16 sm:py-28">
       <div className="pointer-events-none absolute -top-20 right-1/4 h-[400px] w-[400px] rounded-full bg-cyan-500/10 blur-[150px]" />
       <div className="pointer-events-none absolute -bottom-20 left-1/4 h-[400px] w-[400px] rounded-full bg-violet-500/10 blur-[150px]" />
 
@@ -85,7 +85,7 @@ export default function Gallery() {
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-neon-400">
               Classroom moments
             </p>
-            <h2 className="text-4xl font-extrabold tracking-tight md:text-5xl">
+            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight md:text-5xl">
               Real kids. Real robots. <span className="text-gradient">Real chaos.</span>
             </h2>
           </div>
@@ -95,7 +95,7 @@ export default function Gallery() {
           </p>
         </div>
 
-        <div className="gallery-grid grid auto-rows-[240px] grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
+        <div className="gallery-grid grid auto-rows-[180px] sm:auto-rows-[240px] grid-cols-1 gap-3 sm:gap-4 sm:grid-cols-2 md:grid-cols-4">
           {PHOTOS.map((photo, idx) => (
             <div
               key={`${photo.src}-${idx}`}

@@ -9,14 +9,14 @@ const QUOTES = [
 
 export default function Testimonials() {
   return (
-    <section className="relative py-28">
-      <div className="mx-auto max-w-4xl px-6">
+    <section className="relative py-16 sm:py-28">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6">
         {QUOTES.map((q) => (
           <blockquote key={q.author} className="relative text-center">
-            <span className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 text-[140px] leading-none font-extrabold text-white/5 select-none">
+            <span className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 text-[100px] sm:text-[140px] leading-none font-extrabold text-white/5 select-none">
               &ldquo;
             </span>
-            <p className="relative text-2xl font-semibold leading-relaxed md:text-3xl">
+            <p className="relative text-lg sm:text-2xl font-semibold leading-relaxed md:text-3xl">
               {q.quote}
             </p>
             <footer className="mt-8">

@@ -103,7 +103,7 @@ export default function HowItWorks() {
     <section
       ref={rootRef}
       id="how-it-works"
-      className="relative overflow-hidden bg-ink-2 py-28"
+      className="relative overflow-hidden bg-ink-2 py-16 sm:py-28"
     >
       <div className="pointer-events-none absolute -right-40 top-20 h-[480px] w-[480px] rounded-full bg-grape-600/15 blur-[120px]" />
       <div className="pointer-events-none absolute -left-32 bottom-10 h-[380px] w-[380px] rounded-full bg-neon-500/10 blur-[100px]" />
@@ -113,7 +113,7 @@ export default function HowItWorks() {
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-zap-400">
             For schools
           </p>
-          <h2 className="text-4xl font-extrabold tracking-tight md:text-5xl">
+          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight md:text-5xl">
             From empty lab to <span className="text-gradient">robot demo day</span>
           </h2>
         </div>
@@ -133,7 +133,7 @@ export default function HowItWorks() {
                   {step.n}
                 </div>
                 <div
-                  className={`step-card-${i} glass glow-card w-full rounded-3xl p-7 ${step.side === "left" ? "md:text-right" : ""} md:w-[calc(50%-3.5rem)] opacity-0`}
+                  className={`step-card-${i} glass glow-card w-full rounded-3xl p-5 sm:p-7 ${step.side === "left" ? "md:text-right" : ""} md:w-[calc(50%-3.5rem)] opacity-0`}
                 >
                   <span className="mb-2 block font-mono text-xs text-slate-500 sm:hidden">{step.n}</span>
                   <h3 className="text-xl font-bold text-white">{step.title}</h3>

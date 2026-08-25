@@ -2,14 +2,14 @@ import ContactForm from "@/components/ContactForm";
 
 export default function CTASection() {
   return (
-    <section id="contact" className="relative overflow-hidden py-28">
+    <section id="contact" className="relative overflow-hidden py-16 sm:py-28">
       <div className="pointer-events-none absolute inset-0 blob-grid-bg" />
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-start gap-14 px-6 lg:grid-cols-2">
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-start gap-8 sm:gap-14 px-4 sm:px-6 lg:grid-cols-2">
         <div>
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-zap-400">
             Get started
           </p>
-          <h2 className="text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
+          <h2 className="text-2xl sm:text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">
             Bring RoboGyaan <span className="text-gradient">to your school.</span>
           </h2>
           <p className="mt-5 max-w-md text-lg text-slate-400">

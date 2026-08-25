@@ -52,23 +52,23 @@ export default function Curriculum() {
   const grade = GRADES[active];
 
   return (
-    <section id="curriculum" className="relative py-28">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-12 max-w-2xl">
+    <section id="curriculum" className="relative py-16 sm:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="mb-8 sm:mb-12 max-w-2xl">
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-grape-400">
             Curriculum
           </p>
-          <h2 className="text-4xl font-extrabold tracking-tight md:text-5xl">
+          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight md:text-5xl">
             Grows with your students, <span className="text-gradient">grade by grade</span>
           </h2>
         </div>
 
-        <div className="mb-8 flex flex-wrap gap-3">
+        <div className="mb-6 sm:mb-8 flex flex-wrap gap-2 sm:gap-3">
           {GRADES.map((g, i) => (
             <button
               key={g.band}
               onClick={() => setActive(i)}
-              className={`rounded-full border px-6 py-2.5 text-sm font-bold transition-all duration-300 ${
+              className={`rounded-full border px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-bold transition-all duration-300 ${
                 active === i
                   ? `${g.color} scale-105 shadow-lg`
                   : "border-white/10 text-slate-400 hover:border-white/30 hover:text-slate-200"
@@ -79,7 +79,7 @@ export default function Curriculum() {
           ))}
         </div>
 
-        <div key={grade.band} className="glass rounded-3xl p-8 md:p-10">
+        <div key={grade.band} className="glass rounded-3xl p-5 sm:p-8 md:p-10">
           <p className={`inline-block mb-6 rounded-full border px-4 py-1 text-xs font-bold uppercase tracking-widest ${grade.color}`}>
             {grade.band} · {grade.tagline}
           </p>
