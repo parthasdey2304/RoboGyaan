@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="cta" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#facc15"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="950" cy="120" r="200" fill="#22d3ee" opacity="0.06"/>
+  <circle cx="100" cy="500" r="180" fill="#a78bfa" opacity="0.06"/>
+  <circle cx="600" cy="580" r="120" fill="#facc15" opacity="0.04"/>
+
+  <!-- Grid dots pattern -->
+  <g opacity="0.08">
+    <circle cx="200" cy="100" r="2" fill="#fff"/>
+    <circle cx="240" cy="100" r="2" fill="#fff"/>
+    <circle cx="280" cy="100" r="2" fill="#fff"/>
+    <circle cx="320" cy="100" r="2" fill="#fff"/>
+    <circle cx="360" cy="100" r="2" fill="#fff"/>
+    <circle cx="200" cy="140" r="2" fill="#fff"/>
+    <circle cx="240" cy="140" r="2" fill="#fff"/>
+    <circle cx="280" cy="140" r="2" fill="#fff"/>
+    <circle cx="320" cy="140" r="2" fill="#fff"/>
+    <circle cx="360" cy="140" r="2" fill="#fff"/>
+    <circle cx="200" cy="180" r="2" fill="#fff"/>
+    <circle cx="240" cy="180" r="2" fill="#fff"/>
+    <circle cx="280" cy="180" r="2" fill="#fff"/>
+    <circle cx="320" cy="180" r="2" fill="#fff"/>
+    <circle cx="360" cy="180" r="2" fill="#fff"/>
+  </g>
+
+  <!-- Logo R -->
+  <rect x="100" y="250" width="70" height="70" rx="16" fill="url(#accent)"/>
+  <text x="135" y="298" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="44" fill="#0a0e1a">R</text>
+
+  <!-- Brand name -->
+  <text x="190" y="285" font-family="Arial,sans-serif" font-weight="700" font-size="38" fill="white">Robo</text>
+  <text x="270" y="285" font-family="Arial,sans-serif" font-weight="700" font-size="38" fill="url(#accent)">Gyaan</text>
+
+  <!-- Tagline -->
+  <text x="190" y="315" font-family="Arial,sans-serif" font-weight="400" font-size="16" fill="#94a3b8">रोबो ज्ञान · Robotics for Indian classrooms</text>
+
+  <!-- Main headline -->
+  <text x="100" y="410" font-family="Arial,sans-serif" font-weight="900" font-size="56" fill="white">Kids don't just</text>
+  <text x="100" y="475" font-family="Arial,sans-serif" font-weight="900" font-size="56" fill="white">use technology.</text>
+  <text x="100" y="540" font-family="Arial,sans-serif" font-weight="900" font-size="56" fill="url(#accent)">They build it.</text>
+
+  <!-- CTA pill -->
+  <rect x="100" y="565" width="280" height="44" rx="22" fill="url(#cta)"/>
+  <text x="240" y="593" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="16" fill="#0a0e1a">robogyaan.in</text>
+
+  <!-- Hardware icons hint -->
+  <g transform="translate(900, 300)" opacity="0.15">
+    <rect x="0" y="0" width="60" height="40" rx="6" fill="#22d3ee"/>
+    <rect x="80" y="10" width="80" height="50" rx="6" fill="#facc15"/>
+    <rect x="180" y="5" width="70" height="45" rx="6" fill="#4ade80"/>
+    <rect x="60" y="60" width="50" height="35" rx="6" fill="#a78bfa"/>
+    <rect x="140" y="70" width="90" height="40" rx="6" fill="#f472b6"/>
+  </g>
+</svg>
