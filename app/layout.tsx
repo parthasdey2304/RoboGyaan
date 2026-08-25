@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 
@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   title: "RoboGyaan — Robotics & STEM Education for Indian Classrooms",
   description:
     "RoboGyaan (रोबो ज्ञान) brings hands-on robotics, coding and 3D design programs to K-12 schools across India. Micro:bit, Arduino, Avishkaar kits, Scratch and more — delivered inside your school.",
-  metadataBase: new URL("https://robogyaan.in"),
+  metadataBase: new URL("https://www.robogyaan.in"),
   openGraph: {
     title: "RoboGyaan — Robotics & STEM Education for Indian Classrooms",
     description:
       "Hands-on robotics, coding and 3D design programs for K-12 schools. From first puzzle to a working Arduino robot, grade by grade.",
-    url: "https://robogyaan.in",
+    url: "https://www.robogyaan.in",
     siteName: "RoboGyaan",
     locale: "en_IN",
     type: "website",
@@ -38,13 +38,28 @@ export const metadata: Metadata = {
     images: ["/og-image.svg"],
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-icon.png",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0a0e1a",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${poppins.variable} h-full antialiased`}>
+      <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
+      </head>
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>
   );
