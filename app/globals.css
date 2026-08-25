@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #0a0e1a;
+  --color-ink-2: #101728;
+  --color-cream: #fdf9f0;
+
+  --color-neon-300: #67e8f9;
+  --color-neon-400: #22d3ee;
+  --color-neon-500: #06b6d4;
+
+  --color-grape-300: #c4b5fd;
+  --color-grape-400: #a78bfa;
+  --color-grape-500: #8b5cf6;
+  --color-grape-600: #7c3aed;
+
+  --color-zap-400: #facc15;
+  --color-zap-500: #eab308;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-ink);
+  color: #e5eaf5;
+}
+
+.text-gradient {
+  background: linear-gradient(92deg, #22d3ee 0%, #a78bfa 55%, #facc15 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(12px);
+}
+
+.glow-card {
+  position: relative;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s, box-shadow 0.35s;
+}
+.glow-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(34, 211, 238, 0.55);
+  box-shadow: 0 20px 60px -20px rgba(139, 92, 246, 0.45);
+}
+
+.blob-grid-bg {
+  background-image:
+    radial-gradient(ellipse 60% 50% at 15% 10%, rgba(139, 92, 246, 0.18), transparent),
+    radial-gradient(ellipse 50% 40% at 85% 25%, rgba(34, 211, 238, 0.14), transparent),
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: auto, auto, 44px 44px, 44px 44px;
+}
+
+@keyframes marquee-x {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee-x 28s linear infinite;
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+.animate-float {
+  animation: float-y 5s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slower {
+  animation: spin-slow 14s linear infinite;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.35);
+}
+
+.reveal-init {
+  opacity: 0;
+  transform: translateY(36px);
+}
