@@ -233,8 +233,8 @@ export default function Home() {
               <div className="font-mono text-xs opacity-70 mt-1">robogyaan.in is getting a full brutalist makeover. Funk in progress.</div>
             </div>
             <div className="flex gap-2 shrink-0">
-              <a href="mailto:hello@robogyaan.in" className="bg-white text-black border-[3px] border-white px-4 py-2 font-black text-xs tracking-widest uppercase hover:bg-[#FFE600] transition-colors">EMAIL US</a>
-              <a href="#" className="bg-[#A78BFA] text-black border-[3px] border-white px-4 py-2 font-black text-xs tracking-widest uppercase hover:bg-[#22D3EE] transition-colors">INSTAGRAM</a>
+              <a href="mailto:team.robogyaan@gmail.com" className="bg-white text-black border-[3px] border-white px-4 py-2 font-black text-xs tracking-widest uppercase hover:bg-[#FFE600] transition-colors">EMAIL US</a>
+              <a href="https://www.instagram.com/vastavik_parth/" className="bg-[#A78BFA] text-black border-[3px] border-white px-4 py-2 font-black text-xs tracking-widest uppercase hover:bg-[#22D3EE] transition-colors">INSTAGRAM</a>
             </div>
           </div>
           <div className="col-span-12 md:col-span-4 bg-[#FF3B30] border-[4px] border-black p-4 shadow-[6px_6px_0px_0px_#000] relative overflow-hidden">
